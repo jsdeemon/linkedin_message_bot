@@ -8,9 +8,10 @@ from selenium.webdriver.common.by import By
 
 mail = "yourEmail@mail.com"
 key = "yourLinkedInPassword"
-message = "This is text message you want to send to contacts!" ## maximum 300 chars
+message = "text of the message you wanna send" ## maximum 300 chars
 search_param = "Web developer javascript"
-pages_upto = 5
+pages_upto = 2
+totalCount = 3 ## Limit of invitations
 
 url = "https://www.linkedin.com"
 search_param = search_param.replace(" ", "%20")
@@ -53,5 +54,8 @@ for page in range(1, pages_upto):
         browser.execute_script(browser_script, dismiss)
         time.sleep(random.randint(1, 15))
         counter += 1
+        if counter == totalCount:
+            print("Messages & invitations sent: " + str(counter))
+            quit()
         if counter % 3 == 0:
             time.sleep(random.randint(1, 15))
