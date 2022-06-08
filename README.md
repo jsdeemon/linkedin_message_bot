@@ -1,5 +1,5 @@
 # Linkedin Bot (Python + Selenium)
-## Automatically searchs people and connects to them with message
+## Automatically searches people and connects to them with message
 
 ### You can use any web browser. Example Download gecko driver for linux 
 ```bash
