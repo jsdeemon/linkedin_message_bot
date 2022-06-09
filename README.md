@@ -15,7 +15,8 @@ $ virtualenv venv
 $ pip install selenium
 $ source venv/bin/activate
 ```
-### Add your LinkedIn email, password, search query, text message and number of pages into file bot.py. Then run the script
+### Run bot
 ```bash
 $ python bot.py
 ```
+
