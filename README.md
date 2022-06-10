@@ -19,4 +19,5 @@ $ source venv/bin/activate
 ```bash
 $ python bot.py
 ```
+Just input data in console
 
