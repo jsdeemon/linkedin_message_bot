@@ -19,6 +19,7 @@ search_param = search_param.replace(" ", "%20")
 
 browser_script = "arguments[0].click();"
 ## browser = webdriver.Edge("msedgedriver.exe")
+
 browser = webdriver.Firefox()
 browser.maximize_window()
 browser.get(url)
@@ -52,6 +53,7 @@ for page in range(1, pages_upto):
         time.sleep(random.randint(1, maxDelay))
         send = browser.find_element(By.XPATH, value="//button[@aria-label='Send now']")
         browser.execute_script(browser_script, send)
+        print('Invitation was sent to user')
         dismiss = browser.find_element(By.XPATH, value="//button[@aria-label='Dismiss']")
         browser.execute_script(browser_script, dismiss)
         time.sleep(random.randint(1, maxDelay))
@@ -62,3 +64,6 @@ for page in range(1, pages_upto):
             quit()
         if counter % 3 == 0:
             time.sleep(random.randint(1, maxDelay))
+            print('Pages were finished')
+            browser.quit()
+            quit()
