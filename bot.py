@@ -49,6 +49,7 @@ for page in range(1, pages_upto):
         browser.execute_script(browser_script, addnote)
         textArea = browser.find_element_by_id("custom-message")
         textArea.send_keys(message)
+        time.sleep(random.randint(1, maxDelay))
         send = browser.find_element(By.XPATH, value="//button[@aria-label='Send now']")
         browser.execute_script(browser_script, send)
         dismiss = browser.find_element(By.XPATH, value="//button[@aria-label='Dismiss']")
